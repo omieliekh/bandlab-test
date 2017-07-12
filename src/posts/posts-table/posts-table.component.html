@@ -1,0 +1,24 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th ng-click="sortByUser()" class="sortable">
+      User
+      <i ng-if="sortBy === 'user.name'" class="fa fa-sort-asc"></i>
+      <i ng-if="sortBy === '-user.name'" class="fa fa-sort-desc"></i>
+    </th>
+    <th ng-click="sortByTitle()" class="sortable">
+      Title
+      <i ng-if="sortBy === 'title'" class="fa fa-sort-asc"></i>
+      <i ng-if="sortBy === '-title'" class="fa fa-sort-desc"></i>
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="row in $ctrl.posts | orderBy : sortBy">
+    <td>{{row.id}}</td>
+    <td>{{row.user.name}}</td>
+    <td>{{row.title}}</td>
+  </tr>
+  </tbody>
+</table>

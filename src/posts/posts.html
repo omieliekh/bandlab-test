@@ -1,0 +1,30 @@
+<div>
+  <h1>Posts</h1>
+
+  <div ng-if="viewType == 'ungroup'">
+    <button
+      ng-click="groupPosts()"
+      class="btn btn-default"
+    >Group by user</button>
+
+    <posts-table
+      posts="posts"
+    ></posts-table>
+  </div>
+
+
+  <div ng-if="viewType == 'group'">
+    <button
+      ng-click="ungroupPosts()"
+      class="btn btn-default"
+    >Ungroup</button>
+
+    <div
+      ng-repeat="group in groupedPosts"
+    >
+      <h4>By {{group.groupBy.name}}</h4>
+      <posts-table posts="group.posts"></posts-table>
+    </div>
+  </div>
+</div>
+
