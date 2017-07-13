@@ -1,3 +1,3 @@
 // load all js sources
-// const testsContext = require.context('./demo', true, /\.js$/);
-// testsContext.keys().forEach(testsContext);
+const testsContext = require.context('./posts', true, /\.js$/);
+testsContext.keys().forEach(testsContext);
