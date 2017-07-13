@@ -8,10 +8,10 @@ cache:
     - node_modules
 
 install:
-  - yarn install
+  - npm install
 
 script:
-  - yarn run test && yarn run cover
+  - npm run test && npm run cover
 
 before_script:
   - export DISPLAY=:99.0
