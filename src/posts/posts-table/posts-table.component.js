@@ -1,11 +1,6 @@
 import './posts-table.component.less';
 
 function PostsTableController($scope, $element, $attrs) {
-  var ctrl = this;
-
-  console.log('ctrl: ', ctrl);
-  console.log('$scope: ', $scope);
-  
   $scope.sortBy = 'id'
 
   $scope.sortByUser = function () {

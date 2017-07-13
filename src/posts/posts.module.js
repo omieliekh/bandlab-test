@@ -7,8 +7,8 @@ export default angular.module('posts', ['ngRoute'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/posts', {
       template: require('./posts.html'),
-      // css: 'app/posts/posts.css',
-      controller: PostsController
+      controller: PostsController,
+      activeTab: 'posts'
     });
   }])
   .service('PostsService', PostsService)

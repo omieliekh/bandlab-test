@@ -4,11 +4,9 @@ export default ['$http', '$q', function($http, $q) {
     var defer = $q.defer();
 
     $q.all([
-      $http.get(domain + '/users'),
-      $http.get(domain + '/posts')
+      $http.get(domain + '/users', {cache: true}),
+      $http.get(domain + '/posts', {cache: true})
     ]).then(function(response) {
-      console.log('response: ', response);
-
       var users = response[0].data;
       var posts = response[1].data;
 
@@ -49,8 +47,6 @@ export default ['$http', '$q', function($http, $q) {
 
       group.posts.push(arrItem);
     })
-
-    console.log('result: ', result);
 
     return result;
   }
