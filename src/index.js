@@ -12,10 +12,10 @@ angular.module('main', [
   postsModule,
   samplesModule
 ])
-.config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
+.config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
 
-  $routeProvider.otherwise({redirectTo: '/posts'});
+  $routeProvider.otherwise({ redirectTo: '/posts' });
 }])
 .component('menu', menuComponent);
 

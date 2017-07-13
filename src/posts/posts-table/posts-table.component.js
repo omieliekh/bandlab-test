@@ -1,7 +1,7 @@
 import './posts-table.component.less';
 
-function PostsTableController($scope, $element, $attrs) {
-  $scope.sortBy = 'id'
+function PostsTableController($scope) {
+  $scope.sortBy = 'id';
 
   $scope.sortByUser = function () {
     if ($scope.sortBy === 'user.name') {
@@ -9,7 +9,7 @@ function PostsTableController($scope, $element, $attrs) {
     } else {
       $scope.sortBy = 'user.name';
     }
-  }
+  };
 
   $scope.sortByTitle = function () {
     if ($scope.sortBy === 'title') {
@@ -17,7 +17,7 @@ function PostsTableController($scope, $element, $attrs) {
     } else {
       $scope.sortBy = 'title';
     }
-  }
+  };
 }
 
 export default {
@@ -26,4 +26,4 @@ export default {
   bindings: {
     posts: '='
   }
-}
+};

@@ -1,3 +1,3 @@
-export default ['$scope', function($scope) {
+export default [function () {
 
 }];
