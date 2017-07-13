@@ -1,8 +1,6 @@
 import './menu.component.less';
 
 function MenuController($scope, $element, $attrs, $route) {
-  var ctrl = this;
-
   $scope.$route = $route;
 }
 
