@@ -1,0 +1,176 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42;
+  color: #333;
+  background-color: #f2f9ff;
+  margin: 0;
+  padding-top: 35px;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+button {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: 0;
+  border: none;
+  vertical-align: baseline;
+  background-color: rgba(239, 239, 239, 0.95);
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0 5px 0 0;
+  padding: 15px 20px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  line-height: 1em;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(36, 36, 36, 0.15) inset;
+          box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(36, 36, 36, 0.15) inset;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+button:hover {
+  background-color: rgba(207, 207, 207, 0.95);
+  -webkit-box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(36, 36, 36, 0.15) inset;
+          box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(36, 36, 36, 0.15) inset;
+  color: rgba(0, 0, 0, 0.8);
+}
+ul.menu {
+  position: fixed;
+  list-style: none;
+  display: block;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-size: 0;
+  border-bottom: 2px solid rgba(36, 36, 36, 0.15);
+  background-color: #ffffff;
+}
+ul.menu li {
+  display: inline-block;
+  font-size: 16px;
+}
+ul.menu li a {
+  padding: 8px 16px;
+  display: inline-block;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.87);
+  margin: 0 0 -2px;
+  border-bottom: 2px solid transparent;
+  letter-spacing: .5px;
+}
+ul.menu li a.active,
+ul.menu li a:hover {
+  background-color: transparent;
+  border-color: #1c1c1c;
+  color: rgba(0, 0, 0, 0.95);
+}
+ul.menu li a.active {
+  font-weight: bold;
+  letter-spacing: .25px;
+}
+/* Include this file in your html if you are using the CSP mode. */
+
+@charset "UTF-8";
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak],
+.ng-cloak, .x-ng-cloak,
+.ng-hide:not(.ng-hide-animate) {
+  display: none !important;
+}
+
+ng\:form {
+  display: block;
+}
+
+.ng-animate-shim {
+  visibility:hidden;
+}
+
+.ng-anchor {
+  position:absolute;
+}
+table {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 1em 0;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: .28571429rem;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.87);
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table tr:nth-child(2n) {
+  background-color: rgba(0, 0, 50, 0.02);
+}
+table tr td {
+  border-top: 1px solid rgba(34, 36, 38, 0.1);
+}
+tr:first-child td {
+  border-top: none;
+}
+thead th {
+  cursor: pointer;
+  background: #f9fafb;
+  text-align: inherit;
+  color: rgba(0, 0, 0, 0.87);
+  padding: .92857143em .78571429em;
+  vertical-align: inherit;
+  font-style: none;
+  font-weight: 700;
+  text-transform: none;
+  border-bottom: 1px solid rgba(34, 36, 38, 0.1);
+  border-left: none;
+}
+tr th {
+  border-left: 1px solid rgba(34, 36, 38, 0.1);
+}
+thead tr > th:first-child {
+  border-left: none;
+}
+tr:first-child td {
+  border-top: none !important;
+}
+th,
+td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: middle;
+}
+.sortable {
+  cursor: pointer;
+}
+.sortable:hover {
+  font-style: italic;
+}
+
+/*# sourceMappingURL=debugging/main.css.map*/
