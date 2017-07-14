@@ -122,13 +122,10 @@ module.exports = function (options) {
     },
   ];
 
-  // var publicPath = options.devServer
-  //   ? 'http://localhost:2992/assets/'
-  //   : '/assets/';
-  const publicPath = '/_assets/';
+  const publicPath = '/';
 
   const output = {
-    path: path.join(__dirname, 'public', '_assets'),
+    path: path.join(__dirname, 'docs'),
     publicPath,
     filename: `[name].js${(options.longTermCaching ? '?[chunkhash]' : '')}`,
     chunkFilename: (options.devServer ? '[id].js' : '[name].js') + (options.longTermCaching ? '?[chunkhash]' : ''),

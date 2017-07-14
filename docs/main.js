@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/_assets/";
+/******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 1);
@@ -35350,7 +35350,6 @@ exports.default = ['PostsService', '$scope', function (postsService, $scope) {
   $scope.groupedPosts = null;
   $scope.viewType = 'ungroup'; // 'ungroup' | 'group'
 
-
   postsService.getTableData().then(function (posts) {
     $scope.posts = posts;
     $scope.groupedPosts = postsService.groupByUser($scope.posts);
@@ -35390,14 +35389,14 @@ exports.default = ['$http', '$q', function ($http, $q) {
       var posts = response[1].data;
 
       var tableData = posts.map(function (post) {
-        var user = users.filter(function (user) {
+        var matchedUser = users.filter(function (user) {
           return user.id === post.userId;
         })[0];
 
         return {
           id: post.id,
           title: post.title,
-          user: user
+          user: matchedUser
         };
       });
 
@@ -35449,7 +35448,7 @@ Object.defineProperty(exports, "__esModule", {
 
 __webpack_require__(/*! ./posts-table.component.less */ 14);
 
-function PostsTableController($scope, $element, $attrs) {
+function PostsTableController($scope) {
   $scope.sortBy = 'id';
 
   $scope.sortByUser = function () {
@@ -35526,13 +35525,17 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _angular = __webpack_require__(/*! angular */ 0);
+
+var _angular2 = _interopRequireDefault(_angular);
+
 var _samples = __webpack_require__(/*! ./samples.controller */ 18);
 
 var _samples2 = _interopRequireDefault(_samples);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = angular.module('samples', ['ngRoute']).config(['$routeProvider', function ($routeProvider) {
+exports.default = _angular2.default.module('samples', ['ngRoute']).config(['$routeProvider', function ($routeProvider) {
   $routeProvider.when('/samples', {
     template: __webpack_require__(/*! ./samples.html */ 19),
     controller: _samples2.default,
@@ -35555,7 +35558,7 @@ exports.default = angular.module('samples', ['ngRoute']).config(['$routeProvider
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = ['$scope', function ($scope) {}];
+exports.default = [function () {}];
 
 /***/ }),
 /* 19 */
@@ -35566,7 +35569,7 @@ exports.default = ['$scope', function ($scope) {}];
 /*! all exports used */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <h1>Samples</h1>\n\n  <table class=\"table\">\n    <tr>\n      <td width=\"1%\">\n        <audio\n          src=\"//static.bandlab.com/soundbanks/previews/new-wave-kit.ogg\"\n          controls>\n        </audio>\n      </td>\n      <td>new-wave-kit.ogg</td>\n    </tr>\n    <tr>\n      <td width=\"1%\">\n        <audio\n          src=\"//static.bandlab.com/soundbanks/previews/synth-organ.ogg\"\n          controls>\n        </audio>\n      </td>\n      <td>synth-organ.ogg</td>\n    </tr>\n  </table>\n</div>\n\n";
+module.exports = "<div>\n  <h1>Samples</h1>\n\n  <table class=\"table\">\n    <tr>\n      <td width=\"50%\">\n        <audio\n          src=\"//static.bandlab.com/soundbanks/previews/new-wave-kit.ogg\"\n          controls>\n        </audio>\n      </td>\n      <td>new-wave-kit.ogg</td>\n    </tr>\n    <tr>\n      <td width=\"50%\">\n        <audio\n          src=\"//static.bandlab.com/soundbanks/previews/synth-organ.ogg\"\n          controls>\n        </audio>\n      </td>\n      <td>synth-organ.ogg</td>\n    </tr>\n  </table>\n</div>\n\n";
 
 /***/ })
 /******/ ]);
