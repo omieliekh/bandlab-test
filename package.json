@@ -13,7 +13,9 @@
     "test": "karma start",
     "cover": "rimraf coverage && COVERAGE=1 karma start",
     "lint": "eslint ./src/",
-    "precommit": "npm run build-dev && rm -rf docs/debugging && git add docs/"
+    "postprocess-css": "sed -i '' -e 's|url(/|url(|g' docs/main.css",
+    "add-docs": "rm -rf docs/debugging && git add docs/",
+    "precommit": "npm run build-dev && npm run postprocess-css && npm run add-docs"
   },
   "license": "MIT",
   "private": true,
