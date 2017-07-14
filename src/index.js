@@ -9,16 +9,16 @@ import postsModule from './posts/posts.module';
 import samplesModule from './samples/samples.module';
 
 export default angular.module('main', [
-    postsModule,
-    samplesModule
-  ])
-  .config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
-    $locationProvider.hashPrefix('!');
+  postsModule,
+  samplesModule
+])
+.config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
+  $locationProvider.hashPrefix('!');
 
-    $routeProvider.otherwise({ redirectTo: '/posts' });
-  }])
-  .component('menu', menuComponent)
-  .name;
+  $routeProvider.otherwise({ redirectTo: '/posts' });
+}])
+.component('menu', menuComponent)
+.name;
 
 angular.bootstrap(document.documentElement, ['main']);
 

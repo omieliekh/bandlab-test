@@ -29,23 +29,22 @@ const postServiceMock = {
       then: function (callback) {
         callback(postsList);
       }
-    }
+    };
   },
   groupByUser: function () {
     return groupedPostsList;
   }
-}
+};
 
 describe('PostsController', () => {
   beforeEach(module(mainModule));
 
-  let ctrl;
   let scope;
 
   beforeEach(inject(($controller) => {
     scope = {};
 
-    ctrl = $controller(PostsController, {
+    $controller(PostsController, {
       PostsService: postServiceMock,
       $scope: scope
     });
