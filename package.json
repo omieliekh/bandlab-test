@@ -13,9 +13,8 @@
     "test": "karma start",
     "cover": "rimraf coverage && COVERAGE=1 karma start",
     "lint": "eslint ./src/",
-    "precommit": "npm run build-dev && git add docs/"
+    "precommit": "npm run build-dev && rm -rf docs/debugging && git add docs/"
   },
-  "author": "Bogdan Savluk <savluk.bogdan@gmail.com>",
   "license": "MIT",
   "private": true,
   "dependencies": {
