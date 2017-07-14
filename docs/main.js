@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -72,12 +72,25 @@
 /*! all exports used */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./angular */ 2);
+__webpack_require__(/*! ./angular */ 3);
 module.exports = angular;
 
 
 /***/ }),
 /* 1 */
+/*!*********************************************!*\
+  !*** ./node_modules/angular-route/index.js ***!
+  \*********************************************/
+/*! no static exports found */
+/*! all exports used */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ./angular-route */ 4);
+module.exports = 'ngRoute';
+
+
+/***/ }),
+/* 2 */
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
@@ -88,11 +101,15 @@ module.exports = angular;
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _angular = __webpack_require__(/*! angular */ 0);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-__webpack_require__(/*! angular-route */ 3);
+__webpack_require__(/*! angular-route */ 1);
 
 __webpack_require__(/*! angular/angular-csp.css */ 5);
 
@@ -112,16 +129,17 @@ var _samples2 = _interopRequireDefault(_samples);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_angular2.default.module('main', [_posts2.default, _samples2.default]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
+exports.default = _angular2.default.module('main', [_posts2.default, _samples2.default]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
 
   $routeProvider.otherwise({ redirectTo: '/posts' });
-}]).component('menu', _menu2.default);
+}]).component('menu', _menu2.default).name;
+
 
 _angular2.default.bootstrap(document.documentElement, ['main']);
 
 /***/ }),
-/* 2 */
+/* 3 */
 /*!*****************************************!*\
   !*** ./node_modules/angular/angular.js ***!
   \*****************************************/
@@ -33962,19 +33980,6 @@ $provide.value("$locale", {
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
 /***/ }),
-/* 3 */
-/*!*********************************************!*\
-  !*** ./node_modules/angular-route/index.js ***!
-  \*********************************************/
-/*! no static exports found */
-/*! all exports used */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! ./angular-route */ 4);
-module.exports = 'ngRoute';
-
-
-/***/ }),
 /* 4 */
 /*!*****************************************************!*\
   !*** ./node_modules/angular-route/angular-route.js ***!
@@ -35308,6 +35313,8 @@ var _angular = __webpack_require__(/*! angular */ 0);
 
 var _angular2 = _interopRequireDefault(_angular);
 
+__webpack_require__(/*! angular-route */ 1);
+
 var _posts = __webpack_require__(/*! ./posts.controller */ 11);
 
 var _posts2 = _interopRequireDefault(_posts);
@@ -35528,6 +35535,8 @@ Object.defineProperty(exports, "__esModule", {
 var _angular = __webpack_require__(/*! angular */ 0);
 
 var _angular2 = _interopRequireDefault(_angular);
+
+__webpack_require__(/*! angular-route */ 1);
 
 var _samples = __webpack_require__(/*! ./samples.controller */ 18);
 

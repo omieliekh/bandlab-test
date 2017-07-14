@@ -1,4 +1,5 @@
 import angular from 'angular';
+import 'angular-route';
 import PostsController from './posts.controller';
 import PostsService from './posts.service';
 import postsTableComponent from './posts-table/posts-table.component';

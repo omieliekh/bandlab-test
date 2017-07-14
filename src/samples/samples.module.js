@@ -1,4 +1,5 @@
 import angular from 'angular';
+import 'angular-route';
 import SamplesController from './samples.controller';
 
 export default angular.module('samples', ['ngRoute'])

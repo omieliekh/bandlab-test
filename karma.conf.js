@@ -1,5 +1,3 @@
-// Karma configuration
-// Generated on Mon Mar 23 2015 07:31:02 GMT+0200 (EET)
 const makeWebpackConfig = require('./make-webpack-config');
 
 module.exports = function (config) {
@@ -23,7 +21,7 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'src/index.test.js',
+      'src/**/*.test.js',
     ],
 
 
@@ -42,8 +40,18 @@ module.exports = function (config) {
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
     reporters: process.env.COVERAGE
-      ? ['progress', 'coverage-istanbul']
-      : ['progress'],
+      ? ['spec', 'coverage-istanbul']
+      : ['spec'],
+
+    specReporter: {
+      maxLogLines: 5,
+      suppressErrorSummary: false,
+      suppressFailed: false,
+      suppressPassed: false,
+      suppressSkipped: true,
+      showSpecTiming: false,
+      failFast: true
+    },
 
     coverageIstanbulReporter: {
       reports: [
@@ -94,6 +102,7 @@ module.exports = function (config) {
       require('karma-jasmine'),
       require('karma-sourcemap-loader'),
       require('karma-webpack'),
+      require('karma-spec-reporter')
     ].concat(
       process.env.COVERAGE
         ? [require('karma-coverage-istanbul-reporter')]
